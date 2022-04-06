@@ -28,6 +28,7 @@ struct Animation {
          force: Double,
          duration: Double,
          delay: Double) {
+        
         self.perset = perset
         self.curve = curve
         self.force = force

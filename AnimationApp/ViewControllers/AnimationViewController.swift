@@ -22,12 +22,12 @@ class AnimationViewController: UIViewController {
     @IBOutlet weak var runButton: SpringButton!
     
     // MARK: Properties
-    var animation = Animation()
-    var isFirtsRun = false
+    private var animation = Animation()
+    private var isFirtsRun = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabels()        
+        updateLabels()
     }
     
     // MARK: IBActions
@@ -38,7 +38,6 @@ class AnimationViewController: UIViewController {
             animateView(view: animationView)
             animation = Animation.getRandomAnimation()
             sender.setTitle("Run \(animation.perset.rawValue)", for: .normal)
-            return
         } else {
             updateLabels()
             animateView(view: animationView)
