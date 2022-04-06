@@ -37,28 +37,28 @@ class AnimationViewController: UIViewController {
             isFirtsRun = true
             animateView(view: animationView)
             animation = Animation.getRandomAnimation()
-            sender.setTitle("Run \(animation.perset.rawValue)", for: .normal)
+            sender.setTitle("Run \(animation.perset)", for: .normal)
         } else {
             updateLabels()
             animateView(view: animationView)
             animation = Animation.getRandomAnimation()
-            sender.setTitle("Run \(animation.perset.rawValue)", for: .normal)
+            sender.setTitle("Run \(animation.perset)", for: .normal)
         }
     }
     
     // MARK: Private Methods
     
     private func updateLabels() {
-        presetLabel.text = animation.perset.rawValue
-        curveLabel.text = animation.curve.rawValue
+        presetLabel.text = animation.perset
+        curveLabel.text = animation.curve
         forceLabel.text = String(format: "%.2f", animation.force)
         durationLabel.text = String(format: "%.2f", animation.duration)
         delayLabel.text = String(format: "%.2f", animation.delay)
     }
     
     private func animateView(view: SpringView) {
-        view.animation = animation.perset.rawValue
-        view.curve = animation.curve.rawValue
+        view.animation = animation.perset
+        view.curve = animation.curve
         view.force = animation.force
         view.duration = animation.duration
         view.delay = animation.delay

@@ -6,25 +6,26 @@
 //
 
 import Foundation
-import Spring
 
 struct Animation {
-    let perset: Spring.AnimationPreset
-    let curve: Spring.AnimationCurve
+    let perset: String
+    let curve: String
     let force: Double
     let duration: Double
     let delay: Double
     
+
+    
     init() {
-        perset = .fadeIn
-        curve = .easeIn
+        perset = DataManager.shared.persets.first ?? "slideLeft"
+        curve = DataManager.shared.curves.first ?? "easeIn"
         force = 1
         duration = 1
         delay = 0.2
     }
     
-    init(perset: Spring.AnimationPreset,
-         curve: Spring.AnimationCurve, 
+    init(perset: String,
+         curve: String,
          force: Double,
          duration: Double,
          delay: Double) {
@@ -38,8 +39,8 @@ struct Animation {
     
     static func getRandomAnimation() -> Animation {
         let animation = Animation(
-            perset: .allCases[Int.random(in: 0..<Spring.AnimationPreset.allCases.count)],
-            curve: .allCases[Int.random(in: 0..<Spring.AnimationCurve.allCases.count)],
+            perset: DataManager.shared.persets[Int.random(in: 0..<DataManager.shared.persets.count)],
+            curve: DataManager.shared.curves[Int.random(in: 0..<DataManager.shared.curves.count)],
             force: Double.random(in: 0.2...1.0),
             duration: Double.random(in: 0.2...1.0),
             delay: Double.random(in: 0.2...1.0))
