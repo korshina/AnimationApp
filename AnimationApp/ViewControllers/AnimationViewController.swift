@@ -19,8 +19,6 @@ class AnimationViewController: UIViewController {
     
     @IBOutlet weak var animationView: SpringView!
     
-    @IBOutlet weak var runButton: SpringButton!
-    
     // MARK: Properties
     private var animation = Animation()
     private var isFirtsRun = false

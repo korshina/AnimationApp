@@ -141,7 +141,6 @@
                         <outlet property="durationLabel" destination="5Gt-4K-PMC" id="oME-yl-zlV"/>
                         <outlet property="forceLabel" destination="dnn-1n-2wL" id="jdY-lo-bb8"/>
                         <outlet property="presetLabel" destination="vSp-fe-00Z" id="VMV-UK-kl8"/>
-                        <outlet property="runButton" destination="4Hv-lp-7fc" id="ID4-8g-1f4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
