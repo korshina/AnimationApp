@@ -18,4 +18,6 @@ class DataManager {
     let curves = Spring.AnimationCurve.allCases.map { curve in
         curve.rawValue
     }
+    
+    private init() {}
 }
